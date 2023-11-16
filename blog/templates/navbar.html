@@ -1,0 +1,37 @@
+<html>
+<head>
+
+
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+
+
+<div class="navbar navbar-expand-sm bg-dark">
+<div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+<a href="{% url 'main' %}" class="text-light" style="text-decoration:none;"> Main </a>&nbsp;&nbsp;&nbsp;
+</li>
+   <li class="nav-item">
+<a href="{% url 'write' %}" class="text-light" style="text-decoration:none;"> Write </a>&nbsp;&nbsp;&nbsp;
+</li>
+   <li class="nav-item">
+<a href="#" class="text-light" style="text-decoration:none;"> Search </a>&nbsp;&nbsp;&nbsp;
+</li>
+{% if user.is_authenticated %}
+   <li class="nav-item">
+<a href="{% url 'profile' %}" class="text-light" style="text-decoration:none;"> My profile </a>&nbsp;&nbsp;&nbsp;
+</li>
+   <li class="nav-item">
+<a href="{% url 'logout' %}" class="text-light" style="text-decoration:none;"> Logout </a>&nbsp;&nbsp;&nbsp;
+</li>
+{% else %}
+   <li class="nav-item">
+<a href="{% url 'login' %}" class="text-light" style="text-decoration:none;"> Login </a>&nbsp;&nbsp;&nbsp;
+</li>
+{% endif %}
+</ul>
+
+</div>
+</div>
