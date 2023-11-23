@@ -6,7 +6,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9zq0wopill4v^aenp2i)7+x6+#)45zwoo*epux^9s6kvg#^wsl'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -72,11 +72,11 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'admin1234',
-        'HOST': 'database-1.cyiaaizn3jxj.eu-north-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }}
 
 # Password validation
@@ -174,9 +174,9 @@ LOGGING= {
 }
 
 
-AWS_ACCESS_KEY_ID = 'AKIAV774QTBE2NQDMIO6 '       
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'myblogbucketme' #put bucket name here
+AWS_ACCESS_KEY_ID = ' '       
+AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME = '' #put bucket name here
 AWS_S3_SIGNATURE_NAME = 's3v4',
 AWS_S3_REGION_NAME = 'eu-north-1' #write region here like us-east-1
 AWS_S3_FILE_OVERWRITE = False
