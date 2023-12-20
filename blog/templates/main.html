@@ -5,19 +5,30 @@
 </head>
 <body> 
 
+ <section class="container mt-4">
+  <div class="row">
+
 {% for article in articles %}
 
-<a href="article/{{article.id}}">
-<div>
-<img src="{{mediaurl}}{{article.img}}" style="width:130px;height:130px;">
-<font> {{article.title}} </font>
+
+<div class="col-md-4 mb-4">
+<a href="article/{{article.id}}" style="text-decoration: none;  color: black;">
+    <div class="card">
+<img src="{{mediaurl}}{{article.img}}" <!--style="width:130px;height:130px;"-- class="card-img-top">
+<div class="card-body">
+      <h2 class="card-title"> {{article.title}} </h2>
 <font> {{article.author.name}} </font>
 <font> {{article.date}} </font>
-</div>
+     </div>
+    </div>
 </a>
+   </div>
+
+
 
 {% endfor %}
-
+</div>
+</section>
 
 {% if articles.has_other_pages %}
   <ul class="pagination">
@@ -42,5 +53,5 @@
 {% endif %}
 
 
-</body>
-</html>
+{% include 'foot.html' %}
+ 
