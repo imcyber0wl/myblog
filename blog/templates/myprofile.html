@@ -6,13 +6,20 @@
 <body> 
 
 
-<div>
-
-<img src="{{mediaurl}}{{profile.img}}" style="width:150px;height:150;"><br>
-name: <font> {{profile.name}} </font><br>
-bio: <font> {{profile.bio}} </font>
+<div class="container">
+<div class="row mt-5">
+<div class="col-md-4">
+<img src="{{mediaurl}}{{profile.img}}" style="width:150px;height:150;">
 </div>
-<a href="{% url 'edit' %}"> <button> Edit profile </button> </a>
+<div class="col-md-7">
+<h1>{{profile.name}}</h1>
+<p class="lead">{{profile.bio}}</p>
+<a href="{% url 'edit' %}"> <button class="btn-primary"> Edit profile </button> </a>
+</div>
+</div>
+</div>
+<br>
+
 
 {% for article in articles %}
 
@@ -53,3 +60,5 @@ bio: <font> {{profile.bio}} </font>
 
 </body>
 </html>
+
+{% include 'foot.html' %}
