@@ -209,8 +209,11 @@ def edit_article(request,num):
             img=article.img
             title=form.cleaned_data.get('title')
             content=form.cleaned_data.get('content')
-            if request.FILES['img']:
-                img = request.FILES['img']
+            try:
+                if request.FILES['img']:
+                    img = request.FILES['img']
+            except:
+                pass
                 '''fs = FileSystemStorage()
                 file_name = fs.save(image.name, image)
                 file_url = fs.url(file_name)
