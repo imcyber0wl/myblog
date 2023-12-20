@@ -1,15 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
 
+ <title>My Blog</title>
 
   {% load bootstrap5 %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
 
-
-<div class="navbar navbar-expand-sm bg-dark">
-<div class="container-fluid">
+  
+</head>
+<body>
+ <header class="bg-dark text-white">
+  <div class="container">
+   <h1>My Blog</h1>
+   <nav class="navbar navbar-expand-sm">
     <ul class="navbar-nav">
+
       <li class="nav-item">
 <a href="{% url 'main' %}" class="text-light" style="text-decoration:none;"> Main </a>&nbsp;&nbsp;&nbsp;
 </li>
@@ -32,6 +39,7 @@
 </li>
 {% endif %}
 </ul>
+   </nav>
+  </div>
+ </header>
 
-</div>
-</div>
