@@ -8,13 +8,27 @@
 {% if msg %}
 {{msg}}
 {% endif %}
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4>Login</h4>
+          </div>
+          <div class="card-body">
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Submit">
+              <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
+<center>Dont have an account? <a href="{% url 'register' %}"> Register here! </a></center>
 
-Dont have an account? <a href="{% url 'register' %}"> Register here! </a>
 
-</body>
-</html>
+
+
+{% include 'foot.html' %}
