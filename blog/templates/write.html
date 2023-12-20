@@ -5,13 +5,25 @@
 </head>
 <body> 
 
-
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-7">
+        <div class="card">
+          <div class="card-header">
+            <center><h4>Write an article</h4></center>
+          </div>
+          <div class="card-body">
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Submit">
+              <button type="submit" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
 
 
-</body>
-</html>
+
+{% include 'foot.html' %}
