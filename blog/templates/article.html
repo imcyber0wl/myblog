@@ -26,17 +26,20 @@
 
 <p align="left">
 <font style="font-size:20px;margin-left:4px;">
+<article>
 {{article.content}}
+</article>
 </font>
 <br>
+
 {% if nolike == 0 %} 
-<button onclick="add_like({{article.id}})" style="background-color:lime;color:white;"> 
+<button onclick="add_like({{article.id}})" style="float:left;" class="btn-info"> 
 {% else %}
-<button>
+<button style="float:left;" class="btn-info">
 {% endif %}
 
 {% if nolike == 1 %}
-<a href="{% url 'login' %}"> Login to like </a>
+<a href="{% url 'login' %}" style="text-decoration:none;color:white;"> Login to like </a>
 
 {% elif like == 0 %}
 like ! 
@@ -47,10 +50,10 @@ Unlike
 
 {% endif %}
 </button>
-
-<font> likes: {{article.likes}} </font>
-
+<font style="float:right;"> likes: {{article.likes}} </font>
+<br>
 </p>
+</article>
 </div>
 </body>
 
@@ -100,4 +103,4 @@ console.log("liked!")
 }
 
 </script>
-</html>
+{% include 'foot.html' %}
